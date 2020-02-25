@@ -77,8 +77,10 @@ impl Clienthandshake {
 
     fn set_message_params(&mut self) {
         loop {
-            let (param_name, param_value) = self.params.iter().next().unwrap();
-            self.push_parameter(param_name.to_string(), param_value.to_string());
+            match self.params.iter().next() {
+                Some((param_name, param_value)) => self.push_parameter(param_name.to_string(), param_value.to_string()),
+                None => break
+            }
         }
     }
     
