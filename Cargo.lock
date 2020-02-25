@@ -1,0 +1,4 @@
+[[package]]
+name = "edgedb-rust"
+version = "0.1.0"
+
