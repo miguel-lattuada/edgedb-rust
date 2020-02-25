@@ -79,6 +79,21 @@ impl Sequence {
     }
 
     /**
+     * Read char from sequence starting at index
+     */
+    pub fn read_char(&mut self, index: usize) -> char {
+        *self.binary_sequence.get(index).unwrap() as char
+    }
+
+    /**
+     * Read string from sequence starting at index and with fixed size
+     */
+    pub fn read_string(&mut self, index: usize, length: usize) -> String {
+        let bytes: &[u8] = &self.binary_sequence[index..index + length];
+        std::str::from_utf8(bytes).unwrap().to_string()
+    }
+
+    /**
      * Return a mutable reference to internal binary sequence
      */
     pub fn as_mut(&mut self) -> &mut Vec<u8> {
