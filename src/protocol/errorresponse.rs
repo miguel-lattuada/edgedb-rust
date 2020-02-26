@@ -27,7 +27,7 @@
 
 
 // [t, l, l, l, l, s, c, c, c, c, sz, sz, sz, sz, ..sz, ..h]
-use crate::protocol::{Sequence};
+use crate::binarycodec::Sequence;
 
 pub struct ErrorResponse {
     message: Sequence

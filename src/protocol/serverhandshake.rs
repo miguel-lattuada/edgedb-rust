@@ -32,8 +32,7 @@
 
 // Pseudo-bytes representation of structure
 // [v, l, l, l, l, mjv, mjv, miv, miv, nexts, nexts, ...exts]
-
-use crate::protocol::{Sequence};
+use crate::binarycodec::Sequence;
 
 pub struct Serverhandshake {
     message: Sequence

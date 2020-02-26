@@ -37,7 +37,7 @@
 //     Headers extheaders;
 // };
 
-use crate::protocol::{Sequence};
+use crate::binarycodec::Sequence;
 
 pub struct Clienthandshake {
     params: std::collections::HashMap<String, String>,

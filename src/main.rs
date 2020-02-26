@@ -1,3 +1,5 @@
+mod binarycodec;
+mod connection;
 mod protocol;
 
 use std::io::prelude::*;
