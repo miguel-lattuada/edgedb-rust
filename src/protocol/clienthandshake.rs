@@ -38,6 +38,7 @@
 // };
 
 use crate::binarycodec::Sequence;
+use crate::binarycodec::Encode;
 
 pub struct Clienthandshake {
     params: std::collections::HashMap<String, String>,
